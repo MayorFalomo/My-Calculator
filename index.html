@@ -1,26 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Calculator app</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/style.css">
+    <title>Calculator Project</title>
 </head>
 <body>
+    <div class="main-container">
+        <div class="container">
+            <section>
+                <h3>calc</h3>
+                <div class="toggler">
+                    <div class="toggle-text">THEME</div>
+                    <div class="toggle-container">
+                        <input class="radio" id="check" name="buttons" type="radio" checked="checked">
+                        <input class="radio" id="checker" name="buttons" type="radio">
+                        <input class="radio" id="checks" name="buttons" type="radio">
+                        <div id="ball" class="balls"></div>
+                    </div>
+                </div>
 
+                <div class="numbers">
+                    <span class="number">1</span>
+                    <span class="number">2</span>
+                    <span class="number">3</span>
+                </div>
+            </section>
 
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+            <div id="calculateArea" class="calculateArea">
+                <input type="text" id="result" class="result" value="" disabled />
+                <p id="total" class="total"></p>
+            </div>
+        </div>
+
+        <div class="keys">
+            <div class="numBtn" ><button type="button" id="btn1" class="btn1">7</button></div>
+            <div  class="numBtn" ><button type="button" id="num1" class="btn">8</button></div>
+            <div  class="numBtn"><button type="button" id="num" class="btn">9</button></div>
+            <div  class="numBtn"><button type="button" id="deleteBtn" class="delete-btn">DEL</button></div>
+
+            <div  class="numBtn"><button type="button" id="num" class="btn">4</button></div>
+            <div  class="numBtn"><button type="button" id="num" class="btn">5</button></div>
+            <div  class="numBtn"><button type="button" id="num" class="btn">6</button></div>
+            <div  class="numBtn"><button type="button" id="num" class="operatorBtn">+</button></div>
+
+            <div  class="numBtn"><button type="button" id="num" class="btn">1</button></div>
+            <div class="numBtn"><button type="button" id="num" class="btn">2</button></div>
+            <div  class="numBtn"><button type="button" id="num" class="btn">3</button></div>
+            <div  class="numBtn"><button type="button" id="minus" class="operatorBtn">-</button></div>
+
+            <div  class="numBtn"><button type="button" data-operation="." class="operatorBtn">.</button></div>
+            <div  class="numBtn"><button type="button" id="num" class="btn">0</button></div>
+            <div  class="numBtn"><button type="button" id="num" class="operatorBtn">/</button></div>
+            <div  class="numBtn"><button type="button" data-operation="-" class="operatorBtn">*</button></div>
+
+            <div  class="numBtn"><button type="button" id="resetBtn" class="reset-btn">RESET</button></div>
+            <div  class="numBtn"><button type="button" id="equalBtn" class="equal-btn">=</button></div>
+        </div>
+    </div>
+
+    <!-- <img src="/design/active-states-theme-3.jpg"> -->
 </body>
+<script src="/index.js"></script>
 </html>
