@@ -1,6 +1,7 @@
 const btn = document.querySelectorAll(".btn");
 
 const resultArea = document.querySelector(".result");
+const deleteTotal  = document.querySelector(".total")
 const deleteBtn = document.querySelector(".delete-btn");
 const resetBtn = document.querySelector(".reset-btn");
 const equalsBtn = document.querySelector(".equal-btn");
@@ -18,6 +19,15 @@ function clearNumbers() {
 
 resetBtn.addEventListener("click", () => {
     clearNumbers() // called the reset function
+})
+
+const deleted = () => {
+deleteTotal.value = []
+resultArea.value = []
+}
+
+deleteBtn.adddEventListener("click", () => {
+    deleted()  // Called the delete function
 })
 
 
