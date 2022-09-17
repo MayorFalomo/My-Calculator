@@ -21,12 +21,12 @@ resetBtn.addEventListener("click", () => {
     clearNumbers() // called the reset function
 })
 
-const deleted = () => {
-deleteTotal.value = []
+function deleted() {
+document.getElementById("total").innerHTML = 0
 resultArea.value = []
 }
 
-deleteBtn.adddEventListener("click", () => {
+deleteBtn.addEventListener("click", () => {
     deleted()  // Called the delete function
 })
 
