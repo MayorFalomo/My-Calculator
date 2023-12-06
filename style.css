@@ -41,6 +41,7 @@ body {
 
 .main-container {
     max-width: 70%;
+    /* border: 3px green solid; */
 }
 
 .container {
@@ -83,6 +84,10 @@ section {
     transition: all 0.3s ease;
     position: relative;
 }
+
+/* .toggle-container .radio{
+    border: 2px red solid !important;
+} */
 
 .balls {
     width: 18px;
@@ -134,22 +139,39 @@ section {
 }
 
 .keys {
-    display: grid;
+    /* display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 10px;
+    background-color: hsl(223, 31%, 20%);
+    padding: 12px 12px;
+    border-radius: 6px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
+    display: grid;
+     grid-template-columns: repeat(4, 1fr);
+    /* flex-wrap: wrap; */
+     gap: 10px;
     background-color: hsl(223, 31%, 20%);
     padding: 12px 12px;
     border-radius: 6px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
+.numBtn{
+    /* border: 2px red solid; */
+    /* width: 130px; */
+    max-width: 150px;
+    min-width: 80px;
+}
+
+
 .keys button {
     padding: 10px 10px;
     border-radius: 8px;
     background-color: rgb(234, 226, 219);
-    font-size: 32px;
+    font-size: calc(20px + 0.25vw);
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     width: 100%;
+    cursor: pointer;
 }
 
 .keys .equal-btn {
@@ -179,4 +201,26 @@ section {
 
 input[type="radio"] {
     opacity: 0.01;
+    cursor: pointer;
+}
+
+@media (max-width: 580px ) {
+    .main-container{
+        max-width: 95%;
+    }
+    .numBtn{
+    /* border: 2px red solid; */
+    /* width: 100px; */
+    max-width: 100px;
+    min-width: 60px;
+}
+    .keys button{
+     font-size: calc(16px + 0.25vw);
+    }
+}
+
+@media (max-width: 400px ) {
+    .keys button {
+       font-size: calc(14px + 0.25vw);
+    }
 }
